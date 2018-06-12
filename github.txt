@@ -1,0 +1,43 @@
+						git笔记
+1、git是一种版本控制器。也可以说,团队开发时，管理代码用的软件。
+
+2、到https://git-for-windows.github.io/    下载软件，双击，一路"NEXT"，安装完毕。倒开水菜单找“git bash”。
+
+3、git config --global user.name bjw666
+   git config --global user.email 1558544953@qq.com
+
+4、创建版本库
+   cd E:/       进入E盘
+   mkdir test   创建目录
+   git init     初始化
+注：1.不要把仓库建在中文目录下，可能出问题；2.git是个隐藏目录，不要乱碰。
+
+5、git status    状态
+   git add 1.html   添加文件到本地仓库    （git add .）[ .代表当前目录 ]
+   git commit -m "提交注释"     备注
+
+6、示例如下：
+	git status   可见，此时git发现有一个新文件，但并没有把此文件纳入管理，我们需要两步，让仓库                     管理index.html。
+	A.git add index.html    (把index.html提交到暂存区)
+	B.git commit -m "新建index.html"    （把index.html提交到版本库）
+
+7、工作区（开发）--add--->暂存区--commit--->版本库
+
+8、删除文件
+   git status
+   git rm index.html      删除
+   git commit -m "del index.html"
+
+9、远程仓库
+   git remote add origin   远程仓库地址
+   git push -u origin master   push到远程仓库
+或者
+   git push 项目地址
+   输入用户名
+   输入密码
+
+10、克隆
+   git clone 文件所在地址
+
+11、git特点
+	分布式版本控制器和集中式版本控制器。
